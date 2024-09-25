@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen</title>
+    <style>
+        button, input[type=file]{
+            width: 350px; background-color: black; color: cadetblue;
+            padding: 20px; cursor: pointer; border-radius: 10px;
+        }
+    </style>
+    <script>
+            function cargar(){
+            let file = document.getElementById("fileImg").files[0];
+            document.getElementById("imagen").src = URL.createObjectURL(file);
+        }
+    </script>
+</head>
+<body>
+    <h1>Trabajando con imagenes</h1>
+    <hr>
+    <div style="text-align: cenetr;">
+        <img src="img/Libro.png" height="150px" alt="" id="imagen">
+        <br>
+        <input type="file" name="" id="fileImg" onchange="cargar();">   
+    </div>
+</body>
+</html>

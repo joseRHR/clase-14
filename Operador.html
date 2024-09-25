@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <script>
+        function calcular(){
+            //leer datos de las cajas de textos
+            let xn1 = parseInt (document.getElementById("txtNum1").value);
+            let xn2 = parseInt (document.getElementById("txtNum2").value);
+            let xresiduo = xn1 % xn2;
+            if (xresiduo == 0){
+                document.getElementById("txtRes").value="El Numero 1 es divisible por el numeor 2";
+            }else{
+                document.getElementById("txtRes").value="El Numero 1 NO divisible por el numeor 2";
+            }
+            if (xn1 > 0 && xn2 > 0){
+            document.getElementById("txtRes").value;
+            }else{
+                alert("numero negativo no valido")
+                document.getElementById("txtRes").value="No se puede detectar numero negativo";
+            }
+        }
+
+        function limpiar(){
+            document.getElementById("txtNum1").value="";
+            document.getElementById("txtNum2").value="";
+            document.getElementById("txtRes").value="";
+            document.getElementById("txtNum1").focus();
+        }
+    </script>
+</head>
+<body>
+    <h1>Operador Modulo - %</h1>
+    <div style="text-align: center;">
+        <a href="http://www.certus.edu.pe">
+            <img src="https://www.certus.edu.pe/wp-content/uploads/2018/12/certus-logo-1-01-copy-3@2x.png" alt="" width="200px">
+        </a>
+    </div>
+    <hr>
+    <table>
+        <caption>DIVISIBILIDAD</caption>
+        <tr>
+            <td>Numero 1</td>
+            <td>
+                <input type="text" id="txtNum1">
+            </td>
+        </tr>
+        <tr>
+            <td>Numero 2</td>
+            <td>
+                <input type="text" id="txtNum2">
+            </td>
+        </tr>
+        <tr>
+            <td>Resultado</td>
+            <td>
+                <input style="width: 300px;" type="text" id="txtRes" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="calcular();" value="Calcular">
+            </td>
+            <td>
+                <input type="button" onclick="limpiar();" value="limpiar">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
